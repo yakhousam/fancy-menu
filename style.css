@@ -21,6 +21,7 @@ html, body{
   width: 50px;
   height: 50px;
   background: #f0f;
+  z-index: 11111;
 }
 
 
@@ -38,37 +39,45 @@ position: relative;
   
 } */
 .bg-fancy-top{
-  background: #000;
+  background: #f00;
   position: absolute;
   top:0;
   width: 100vmax;
-  height: 33vmax;
+  height: 50vmax;
   transform-origin: 0 0;
-  transform: rotate(-45deg) translate(-50%);
-  z-index: 111;
- 
+  transform: rotate(-45deg) translate(-50%) scale(1,0);
+  transition: transform 1.5s ease-in;
+  z-index: 111; 
 }
 .bg-fancy-middle{
   background: #f00;
   position: absolute;
   top:0;
   /* left:50vw; */
-  width: 100vmax;
-  height: 50vmax;
-  
-  transform: rotate(-45deg) translate(-40%, 50%) scale(2)
- 
-
+  width: 200vmax;
+  height: 60vmax;  
+  transform: rotate(-45deg) translate(-40%, -50%) scale(1,0);
+  transition: transform 1s ease-in
 }
+
 .bg-fancy-bottom{
-  background: #ff0;
+  background: #f00;
   position: absolute;
   bottom: 0;
   right: 0;
   width: 100vmax;
-  height: 33vmax;
+  height: 50vmax;
   transform-origin: 100% 100%;
-  transform: rotate(-45deg) translate(50%);
+  transform: rotate(-45deg) translate(50%) scale(1,0);
+  transition: transform 1.5s ease-in;
   z-index: 111;
-
+}
+.bg-top-scale{
+  transform: rotate(-45deg) translate(-50%) scale(1,1);
+}
+.bg-middle-scale{
+  transform: rotate(-45deg) translate(-40%, -50%) scale(1,1);
+}
+.bg-bottom-scale{
+  transform: rotate(-45deg) translate(50%) scale(1,1);
 }
